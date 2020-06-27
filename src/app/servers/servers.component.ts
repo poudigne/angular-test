@@ -8,10 +8,9 @@ import { MatButtonModule } from '@angular/material/button';
 export class ServersComponent implements OnInit {
 
   serverCreationStatus = 'No server was created!';
-
   serverName='testserver';
-
   username='';
+  serverCreated = false;
   constructor() {
   }
 
@@ -19,6 +18,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(){
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server was created! Name is ' +  this.serverName ;
   }
 
