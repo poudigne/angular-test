@@ -1,0 +1,9 @@
+<!-- <input mat-input color="primary" type="text" (input)="onUpdateServerName($event)"/> -->
+<input mat-input color="primary" type="text" [(ngModel)]="serverName"/>
+<p>{{ serverName }}</p>
+
+<button mat-raised-button color="primary" 
+    (click)="onCreateServer()">Add server</button>
+<p [innerText]="serverCreationStatus"></p>
+<app-server></app-server>
+<app-server></app-server>
